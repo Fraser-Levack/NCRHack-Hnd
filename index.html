@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hand Tracking</title>
+    <style>
+      video, canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <video id="input_video" autoplay playsinline></video>
+    <canvas id="output_canvas"></canvas>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
