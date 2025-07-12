@@ -48,7 +48,10 @@ hands.onResults((results) => {
     canvasCtx.fillStyle = 'red';
     canvasCtx.fill();
 
-    console.log(`Hand center: (${centerX.toFixed(1)}, ${centerY.toFixed(1)})`);
+    const handCenterElement = document.getElementById('hand-center');
+    if (handCenterElement) {
+      handCenterElement.textContent = `Hand center: (${centerX.toFixed(1)}, ${centerY.toFixed(1)})`;
+    }
   }
 
   canvasCtx.restore();
