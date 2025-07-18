@@ -13,7 +13,7 @@
       transform: scaleX(-1);
     }
   </style>
-  <link rel="stylesheet" type="text/css" href="src/style.css">
+  <link rel="stylesheet" type="text/css" href="withdrawal.css">
 </head>
 
 <body>
@@ -36,19 +36,22 @@
         Swipe: None
       </p>
     </div>
-    <div class="split-right right">
+    <div class="split-right right background-image">
       <div class="centered">
-        <h2 class="instructions">This is a hand gesture controlled ATM. Use swiping movements to move between buttons. Push your hand towards the screen to select a button.</h2>
-      </div>
-      <div class="centered">
-        <h1 class="text">Tap Card</h1>
-      </div>
-      <div class="centered">
-        <button class="bigButton" onclick="startATM()" id="1" type="button">Start</button>
+        <h1>Please select an amount to withdraw</h1>
+        <button id="1" onclick="withdrawSuccess()" class="left-button button btn1">5</button>
+        <button id="2" onclick="withdrawSuccess()" class="right-button button btn2">10</button>
+        <button id="3" onclick="withdrawSuccess()" class="left-button button btn3">20</button>
+        <button id="4" onclick="withdrawSuccess()" class="right-button button btn4">30</button>
+        <button id="5" onclick="withdrawSuccess()" class="left-button button btn5">40</button>
+        <button id="6" onclick="withdrawSuccess()" class="right-button button btn6">50</button>
+        <button id="7" onclick="withdrawSuccess()" class="left-button button btn7">100</button>
+        <button id="8" onclick="exitATM()" class="right-button button btn8">Exit</button>
       </div>
     </div>
+  </div>
 
-    <script type="module" src="src/main.js"></script>
+  <script type="module" src="../main.js"></script>
 </body>
 
 </html>

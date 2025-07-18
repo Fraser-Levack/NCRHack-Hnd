@@ -13,7 +13,8 @@
       transform: scaleX(-1);
     }
   </style>
-  <link rel="stylesheet" type="text/css" href="src/style.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="done.css">
 </head>
 
 <body>
@@ -36,19 +37,22 @@
         Swipe: None
       </p>
     </div>
+
     <div class="split-right right">
-      <div class="centered">
-        <h2 class="instructions">This is a hand gesture controlled ATM. Use swiping movements to move between buttons. Push your hand towards the screen to select a button.</h2>
-      </div>
-      <div class="centered">
-        <h1 class="text">Tap Card</h1>
-      </div>
-      <div class="centered">
-        <button class="bigButton" onclick="startATM()" id="1" type="button">Start</button>
+      <div class="container">
+        <h1 class="bigText">Transaction Complete</h1>
       </div>
     </div>
 
-    <script type="module" src="src/main.js"></script>
+    <script type="module" src="../main.js"></script>
+
+
+    <script>
+      setTimeout(() => {
+         window.location.href = window.location.href.split("src/done/done.html")[0];
+      }, 5000);
+    </script>
+
 </body>
 
 </html>
