@@ -717,78 +717,32 @@ const updateSwipeStatus = (message, color) => {
   }
 }
 
-// Smart navigation functions that work from any page location
+// Simple and reliable navigation functions for Vercel
 window.startATM = function () {
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    // From root, navigate to src folder
-    window.location.href = "src/txMenu/txMenu.html";
-  } else {
-    // From a src subfolder, navigate relatively
-    window.location.href = "../txMenu/txMenu.html";
-  }
+  window.location.assign("src/txMenu/txMenu.html");
 }
 
 window.exitATM = function () {
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    // Already at root
-    window.location.reload();
-  } else {
-    // From src folder, go back to root
-    const pathParts = currentPath.split('/');
-    const srcIndex = pathParts.lastIndexOf('src');
-    if (srcIndex > 0) {
-      const rootPath = pathParts.slice(0, srcIndex).join('/');
-      window.location.href = rootPath + '/';
-    } else {
-      window.location.href = "../../index.html";
-    }
-  }
+  window.location.assign("index.html");
 }
 
 window.depositCash = function () {
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    window.location.href = "src/cashDeposit/cashDeposit.html";
-  } else {
-    window.location.href = "../cashDeposit/cashDeposit.html";
-  }
+  window.location.assign("src/cashDeposit/cashDeposit.html");
 }
 
 window.withdrawal = function () {
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    window.location.href = "src/withdrawal/withdrawal.html";
-  } else {
-    window.location.href = "../withdrawal/withdrawal.html";
-  }
+  window.location.assign("src/withdrawal/withdrawal.html");
 }
 
 window.balance = function () {
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    window.location.href = "src/balance/balance.html";
-  } else {
-    window.location.href = "../balance/balance.html";
-  }
+  window.location.assign("src/balance/balance.html");
 }
 
 window.done = function () {
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    window.location.href = "src/done/done.html";
-  } else {
-    window.location.href = "../done/done.html";
-  }
+  window.location.assign("src/done/done.html");
 }
 
 window.withdrawSuccess = function () {
   console.log("Withdrawal successful, redirecting to success page.");
-  const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    window.location.href = "src/withdrawSuccess/withdrawSuccess.html";
-  } else {
-    window.location.href = "../withdrawSuccess/withdrawSuccess.html";
-  }
+  window.location.assign("src/withdrawSuccess/withdrawSuccess.html");
 }
