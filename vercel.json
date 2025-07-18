@@ -1,9 +1,15 @@
 {
-  "rewrites": [
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "headers": [
     {
       "source": "/(.*)",
-      "destination": "/$1"
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
-  ],
-  "trailingSlash": false
+  ]
 }
