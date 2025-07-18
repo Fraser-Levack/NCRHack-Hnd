@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hand Tracking</title>
+    <style>
+        video,
+        canvas {
+            max-width: 100%;
+            height: auto;
+            position: fixed;
+            transform: scaleX(-1);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/s/src/style.css">
+    <link rel="stylesheet" type="text/css" href="cashDeposit.css">
+</head>
+
+<body>
+    <div class="split-left left">
+        <div class="videoCentered">
+            <video id="input_video" autoplay playsinline></video>
+
+            <canvas id="output_canvas"></canvas>
+
+            <p id="hand-center"
+                style="position: absolute; top: -130px; left: 10px; color: white; background: rgba(0,0,0,0.5); padding: 4px 8px; border-radius: 4px; z-index: 10;">
+                Hand center: (x, y)
+            </p>
+            <p id="hand-speed"
+                style="position: absolute; top: -90px; left: 10px; color: white; background: rgba(0,0,0,0.5); padding: 4px 8px; border-radius: 4px; z-index: 10;">
+                Hand speed: (x, y)
+            </p>
+            <p id="swipe-status"
+                style="position: absolute; top: -50px; left: 10px; color: white; background: rgba(0,0,0,0.7); padding: 8px 12px; border-radius: 4px; z-index: 10; font-weight: bold;">
+                Swipe: None
+            </p>
+        </div>
+        <div class="split-right right">
+            <div class="centered">
+                <h1 class="text">Cash Deposit</h1>
+                <h3 class="text">Insert Cash</h3>
+                </div>
+                <div class="centered">
+                    <button id="1" class="bigButton" onclick="done()" type="button">Deposit Cash</button>
+                </div>
+            </div>
+        </div>
+
+            <script type="module" src="/s/src/main.js"></script>
+</body>
+
+</html>

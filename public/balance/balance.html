@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hand Tracking</title>
+    <style>
+        video,
+        canvas {
+            max-width: 100%;
+            height: auto;
+            position: fixed;
+            transform: scaleX(-1);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/src/style.css">
+    <link rel="stylesheet" type="text/css" href="balance.css">
+</head>
+
+<body>
+    <div class="split-left left">
+        <div class="videoCentered">
+            <video id="input_video" autoplay playsinline></video>
+
+            <canvas id="output_canvas"></canvas>
+
+            <p id="hand-center"
+                style="position: absolute; top: -130px; left: 10px; color: white; background: rgba(0,0,0,0.5); padding: 4px 8px; border-radius: 4px; z-index: 10;">
+                Hand center: (x, y)
+            </p>
+            <p id="hand-speed"
+                style="position: absolute; top: -90px; left: 10px; color: white; background: rgba(0,0,0,0.5); padding: 4px 8px; border-radius: 4px; z-index: 10;">
+                Hand speed: (x, y)
+            </p>
+            <p id="swipe-status"
+                style="position: absolute; top: -50px; left: 10px; color: white; background: rgba(0,0,0,0.7); padding: 8px 12px; border-radius: 4px; z-index: 10; font-weight: bold;">
+                Swipe: None
+            </p>
+        </div>
+    </div>
+    <div class="split-right right">
+        <div class="centered">
+            <h1 >Available Balance:<br> £61.11</h1>
+            <div class="buttonContainer">
+                <button id="1" class="left-button button btn1">Withdrawal</button>
+                <button id="2" class="right-button button btn2">Cash Deposit</button>
+            </div>
+            <div class="buttonContainer">
+                <button id="3" class="left-button button btn3">Receipt</button>
+                <button id="4" class="right-button button btn4" onclick="exitATM()">Exit</button>
+            </div>
+            
+            <!-- <div class="centered">
+                <button class="startButton" onclick="startATM()" id="start" type="button">Start</button>
+            </div>
+            <div class="centered">
+                <button class="startButton" onclick="startATM()" id="start" type="button">Start</button>
+            </div> -->
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

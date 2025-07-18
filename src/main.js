@@ -717,32 +717,32 @@ const updateSwipeStatus = (message, color) => {
   }
 }
 
-// Simple and reliable navigation functions for Vercel
+// Simple navigation functions for public folder structure
 window.startATM = function () {
-  window.location.assign("src/txMenu/txMenu.html");
+  window.location.href = "/txMenu/txMenu.html";
 }
 
 window.exitATM = function () {
-  window.location.assign("index.html");
+  window.location.href = "/";
 }
 
 window.depositCash = function () {
-  window.location.assign("src/cashDeposit/cashDeposit.html");
+  window.location.href = "/cashDeposit/cashDeposit.html";
 }
 
 window.withdrawal = function () {
-  window.location.assign("src/withdrawal/withdrawal.html");
+  window.location.href = "/withdrawal/withdrawal.html";
 }
 
 window.balance = function () {
-  window.location.assign("src/balance/balance.html");
+  window.location.href = "/balance/balance.html";
 }
 
 window.done = function () {
-  window.location.assign("src/done/done.html");
+  window.location.href = "/done/done.html";
 }
 
 window.withdrawSuccess = function () {
   console.log("Withdrawal successful, redirecting to success page.");
-  window.location.assign("src/withdrawSuccess/withdrawSuccess.html");
+  window.location.href = "/withdrawSuccess/withdrawSuccess.html";
 }

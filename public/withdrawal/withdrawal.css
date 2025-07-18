@@ -1,0 +1,304 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.button {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  background-color: #285C4D;
+  color: #ffffff;
+  font-size: 36px !important;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.split-left {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.split-right {
+  height: 100%;
+  width: 70%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.background-image {
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #D1E0D7;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text {
+  color: #13322B;
+}
+
+.sectionHeader {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.withdrawalContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.withdrawalOptions {
+  display: grid;
+  width: 100%;
+  font-size: 1rem;
+  justify-self: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding-top: 2rem;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.withdrawalOptions> :nth-child(2n) {
+  justify-self: end;
+}
+
+.highlighted-button {
+  background-color: #2189E8;
+  color: #ffffff;
+}
+
+.highlighted-btn1 {
+  background-color: #13322B;
+  transform: translateX(-20px);
+  box-shadow: -10px -10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn2 {
+  background-color: #13322B;
+  transform: translateX(20px);
+  box-shadow: 10px -10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn3 {
+  background-color: #13322B;
+  transform: translateX(-20px);
+  box-shadow: -10px 10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn4 {
+  background-color: #13322B;
+  transform: translateX(20px);
+  box-shadow: 10px 10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn5 {
+  background-color: #13322B;
+  transform: translateX(-20px);
+  box-shadow: -10px -10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn6 {
+  background-color: #13322B;
+  transform: translateX(20px);
+  box-shadow: 10px -10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn7 {
+  background-color: #13322B;
+  transform: translateX(-20px);
+  box-shadow: -10px 10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.highlighted-btn8 {
+  background-color: #13322B;
+  transform: translateX(20px);
+  box-shadow: 10px 10px 0 #507F70;
+  font-size: 36px !important;
+}
+
+.left-button {
+  left: 150px;
+  position: fixed;
+  width: 300px;
+  height: 100x;
+  background-color: #285C4D;
+  color: #ffffff;
+  font-size: 36px !important;
+}
+
+.btn1 {
+  top: 140px;
+}
+
+.btn3 {
+  top: 290px;
+}
+
+.btn5 {
+  top: 440px;
+}
+
+.btn7 {
+  top: 590px;
+}
+
+
+.right-button {
+  right: 150px;
+  position: fixed;
+  width: 300px;
+  height: 100px;
+  background-color: #285C4D;
+  color: #ffffff;
+  font-size: 36px !important;
+}
+
+.btn2 {
+  top: 140px;
+}
+
+.btn4 {
+  top: 290px;
+}
+
+
+.btn6 {
+  top: 440px;
+}
+
+.btn8 {
+  top: 590px;
+}
+
+
+h1,
+h2,
+h3,
+p {
+  color: #004E42;
+}
+
+.videoCentered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
