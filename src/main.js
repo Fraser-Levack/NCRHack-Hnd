@@ -717,42 +717,32 @@ const updateSwipeStatus = (message, color) => {
   }
 }
 
-// Simple utility function to get the base URL reliably for both local and Vercel deployment
-function getBaseUrl() {
-  // Get the origin (protocol + domain)
-  const origin = window.location.origin;
-  
-  // For Vercel and most static hosting, files are served from root
-  // So we just need the origin
-  return origin + '/';
-}
-
-// Simple navigation functions using reliable URL manipulation
+// Simple navigation functions using absolute paths from root (works reliably on Vercel)
 window.startATM = function () {
-  window.location.href = getBaseUrl() + "src/txMenu/txMenu.html";
+  window.location.href = "/src/txMenu/txMenu.html";
 }
 
 window.exitATM = function () {
-  window.location.href = getBaseUrl();
+  window.location.href = "/";
 }
 
 window.depositCash = function () {
-  window.location.href = getBaseUrl() + "src/cashDeposit/cashDeposit.html";
+  window.location.href = "/src/cashDeposit/cashDeposit.html";
 }
 
 window.withdrawal = function () {
-  window.location.href = getBaseUrl() + "src/withdrawal/withdrawal.html";
+  window.location.href = "/src/withdrawal/withdrawal.html";
 }
 
 window.balance = function () {
-  window.location.href = getBaseUrl() + "src/balance/balance.html";
+  window.location.href = "/src/balance/balance.html";
 }
 
 window.done = function () {
-  window.location.href = getBaseUrl() + "src/done/done.html";
+  window.location.href = "/src/done/done.html";
 }
 
 window.withdrawSuccess = function () {
   console.log("Withdrawal successful, redirecting to success page.");
-  window.location.href = getBaseUrl() + "src/withdrawSuccess/withdrawSuccess.html";
+  window.location.href = "/src/withdrawSuccess/withdrawSuccess.html";
 }
