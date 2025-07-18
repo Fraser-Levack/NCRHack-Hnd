@@ -717,18 +717,14 @@ const updateSwipeStatus = (message, color) => {
   }
 }
 
-// Simple utility function to get the base URL reliably
+// Simple utility function to get the base URL reliably for both local and Vercel deployment
 function getBaseUrl() {
-  const currentPath = window.location.pathname;
-  const srcIndex = currentPath.lastIndexOf('/src/');
+  // Get the origin (protocol + domain)
+  const origin = window.location.origin;
   
-  if (srcIndex === -1) {
-    // If we're not in a src folder, assume we're at the root
-    return window.location.origin + window.location.pathname.replace(/[^/]*$/, '');
-  }
-  
-  const basePath = currentPath.substring(0, srcIndex + 1);
-  return window.location.origin + basePath;
+  // For Vercel and most static hosting, files are served from root
+  // So we just need the origin
+  return origin + '/';
 }
 
 // Simple navigation functions using reliable URL manipulation
